@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">UnipiPliShopping</string>
+    <string name="prompt_username">Username</string>"
+    <string name="prompt_password">Password</string>"
+    <string name="prompt_fname">First Name</string>"
+    <string name="prompt_lname">Last Name</string>"
+    <string name="prompt_email">Email</string>"
+    <string name="alt_login_methods_prompt">Or login with:</string>
+    <string name="test">Test</string>
+    <string name="light_mode" translatable="false">Light Mode</string>
+    <string name="night_mode" translatable="false">Night Mode</string>
+    <string name="buy_btn">Buy</string>
+    <string name="login_btn">Login</string>
+    <string name="register_btn">Register</string>
+    <string name="go_to_register_btn">Go to Register</string>
+    <string name="got_to_login_btn">Go to Login</string>
+
+    <!-- Product Strings -->
+    <string name="product1" translatable="false">Quantum Ultra Wireless Headphones      €149.99</string>
+    <string name="product2" translatable="false">EcoSphere Reusable Water Bottle        €24.99</string>
+    <string name="product3" translatable="false">Pixel Pro Drawing Tablet               €199.99</string>
+    <string name="product4" translatable="false">Arcadia Gaming Mouse                   €59.99</string>
+    <string name="product5" translatable="false">SolarSmart LED Desk Lamp               €39.99</string>
+    <string name="product6" translatable="false">Virtuo VR Headset                      €299.99</string>
+    <string name="product7" translatable="false">NutriBlend Smart Blender               €89.99</string>
+    <string name="product8" translatable="false">PulseFit Smartwatch                    €129.99</string>
+    <string name="product9" translatable="false">GreenGrow Indoor Herb Kit              €49.99</string>
+    <string name="product10" translatable="false">RetroByte Portable Console            €89.99</string>
+
+    <string name="client_id" translatable="false">365619355847-0ue5c3lsijid4d0ld5tar93g5q7jpldm.apps.googleusercontent.com</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Ελληνικά</item>
+        <item>中文</item>
+    </string-array>
+    <string name="order_btn">Finish Order</string>
+</resources>

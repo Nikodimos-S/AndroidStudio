@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cartLayout"
+        android:layout_width="409dp"
+        android:layout_height="669dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product8"
+                        tools:srcCompat="@drawable/product8" />
+
+                    <TextView
+                        android:id="@+id/price9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product6" />
+
+                    <Button
+                        android:id="@+id/buy_btn_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product3"
+                        tools:srcCompat="@drawable/product3" />
+
+                    <TextView
+                        android:id="@+id/price4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product10" />
+
+                    <Button
+                        android:id="@+id/buy_btn_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product4"
+                        tools:srcCompat="@drawable/product4" />
+
+                    <TextView
+                        android:id="@+id/price5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product3" />
+
+                    <Button
+                        android:id="@+id/buy_btn_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product9"
+                        tools:srcCompat="@drawable/product9" />
+
+                    <TextView
+                        android:id="@+id/price10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product5" />
+
+                    <Button
+                        android:id="@+id/buy_btn_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product10"
+                        tools:srcCompat="@drawable/product10" />
+
+                    <TextView
+                        android:id="@+id/price2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product7" />
+
+                    <Button
+                        android:id="@+id/buy_btn_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product1"
+                        tools:srcCompat="@drawable/product1" />
+
+                    <TextView
+                        android:id="@+id/price1"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:text="@string/product8"
+                        tools:text="@string/product8" />
+
+                    <Button
+                        android:id="@+id/buy_btn_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product6"
+                        tools:srcCompat="@drawable/product6" />
+
+                    <TextView
+                        android:id="@+id/price7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product1" />
+
+                    <Button
+                        android:id="@+id/buy_btn_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product5"
+                        tools:srcCompat="@drawable/product5" />
+
+                    <TextView
+                        android:id="@+id/price6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product2" />
+
+                    <Button
+                        android:id="@+id/buy_btn_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product2"
+                        tools:srcCompat="@drawable/product2" />
+
+                    <TextView
+                        android:id="@+id/price3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product9" />
+
+                    <Button
+                        android:id="@+id/buy_btn_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/product7"
+                        tools:srcCompat="@drawable/product7" />
+
+                    <TextView
+                        android:id="@+id/price8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/product3" />
+
+                    <Button
+                        android:id="@+id/buy_btn_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="101dp"
+                        android:text="@string/buy_btn" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/settings_icon_foreground" />
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/selected_activity"
+            app:srcCompat="@mipmap/home_icon_foreground" />
+
+        <ImageView
+            android:id="@+id/cartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/shopping_icon_foreground" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

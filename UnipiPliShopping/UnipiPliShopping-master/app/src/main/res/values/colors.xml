@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="placeholder_text">#a1a1a1</color>
+    <color name="selected_activity">#4D505050</color>
+    <color name="dark_color">#3A3A3A</color>
+    <color name="purple">#6750A4</color>
+    <color name="light_purple">#A288ED</color>
+    <color name="light_gray">#E4E4E4FF</color>
+    <color name="dark_gray">#232323</color>
+
+</resources>

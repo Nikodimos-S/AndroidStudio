@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UnipiPliShopping</string>
+    <string name="prompt_username">Ψευδόνυμο</string>
+    <string name="prompt_password">Κωδικός</string>
+    <string name="prompt_fname">Όνομα</string>
+    <string name="prompt_lname">Επίθετο</string>
+    <string name="prompt_email">Ηλεκτρονική Διεύθυνση</string>
+    <string name="alt_login_methods_prompt">Ή σύνδεση με:</string>
+    <string name="test">Τ</string>
+    <string name="buy_btn">Αγορά</string>
+    <string name="login_btn">Σύνδεση</string>
+    <string name="register_btn">Εγγραφή</string>
+    <string name="go_to_register_btn">Μεταβείτε στην εγγραφή</string>
+    <string name="got_to_login_btn">Μεταβείτε στην εγγραφή</string>
+    <string name="order_btn">Ολοκλήρωση Παραγγελία</string>
+</resources>
