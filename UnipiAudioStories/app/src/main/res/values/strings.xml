@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="story1">The Star Who Lost Its Sparkle</string>
+    <string name="story2">Benny the Brave Bunny</string>
+    <string name="story3">The Snail Who Wanted to Race</string>
+    <string name="story4">The Magic Paintbrush</string>
+    <string name="story5">The Lion and the Whispering Wind</string>
 </resources>
