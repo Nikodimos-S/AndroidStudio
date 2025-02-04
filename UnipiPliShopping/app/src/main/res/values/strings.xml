@@ -14,6 +14,9 @@
     <string name="register_btn">Register</string>
     <string name="go_to_register_btn">Go to Register</string>
     <string name="got_to_login_btn">Go to Login</string>
+    <string name="log_out">Logout</string>
+    <string name="enable_geofencing">Enable Geofencing</string>
+    <string name="theme_btn">Light/Dark mode</string>
 
     <!-- Product Strings -->
     <string name="product1" translatable="false">Quantum Ultra Wireless Headphones      €149.99</string>

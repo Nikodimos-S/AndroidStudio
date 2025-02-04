@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UnipiAudioStories</string>
+    <string name="read_story">阅读</string>
+    <string name="favs">最喜爱的故事</string>
+</resources>

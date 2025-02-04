@@ -1,24 +1,19 @@
 package com.freddokles.unipiplishopping;
 
 import android.Manifest;
-
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
@@ -26,29 +21,17 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.work.PeriodicWorkRequest;
-import androidx.work.WorkManager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.location.Geofence;
-import com.google.android.gms.location.GeofencingClient;
-import com.google.android.gms.location.GeofencingRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.GeoPoint;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-
-
 import java.util.ArrayList;
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -76,10 +59,6 @@ public class HomeActivity extends AppCompatActivity {
         }
 
 
-        /*Uploads firebase files for testing
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        FirebaseUploader.clearCollection(db, () -> FirebaseUploader.uploadData(db));*/
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -98,7 +77,7 @@ public class HomeActivity extends AppCompatActivity {
             Intent serviceIntent = new Intent(this, LocationService.class);
             startService(serviceIntent);
         }
-
+        //navbar
         ImageView settingsBtn = findViewById(R.id.settingsButton);
         ImageView cartBtn = findViewById(R.id.cartButton);
         ImageView homeBtn = findViewById(R.id.homeButton);
@@ -112,6 +91,7 @@ public class HomeActivity extends AppCompatActivity {
         });
         cartBtn.setOnClickListener(view -> openCartActivity());
     }
+    //requests notification permission
     private static final int NOTIFICATION_PERMISSION_REQUEST_CODE = 1001;
 
     private void checkAndRequestNotificationPermission() {
@@ -120,6 +100,7 @@ public class HomeActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, NOTIFICATION_PERMISSION_REQUEST_CODE);
         }
     }
+    //requests location permission
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1002;
 
     private void checkAndRequestLocationPermission() {
@@ -127,7 +108,7 @@ public class HomeActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
-
+    //creates a notification channel
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
@@ -140,7 +121,7 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-
+    //retrieves user document from firebase
     private void getUserDocument() {
         String currentUserEmail = m_auth.getCurrentUser().getEmail(); // Get the current user's email
 
@@ -264,7 +245,7 @@ public class HomeActivity extends AppCompatActivity {
                 .getBoolean("Geofence_Enabled", false);
     }
 
-
+    //sets the theme according to the toggle state
     private void setTheme(boolean toggle_state) {
 
         if (toggle_state) {
@@ -274,16 +255,19 @@ public class HomeActivity extends AppCompatActivity {
             getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
     }
+    //loads the toggle state from the shared preferences
     private void loadTheme() {
         boolean toggle_theme = getSharedPreferences("Settings", MODE_PRIVATE)
                 .getBoolean("My_State", true); // Default to English
         setTheme(toggle_theme);
     }
+    //loads the locale from the shared preferences
     private void loadLocale() {
         String languageCode = getSharedPreferences("Settings", MODE_PRIVATE)
                 .getString("My_Lang", "en"); // Default to English
         setLocale(languageCode);
     }
+    //sets the locale if the current locale is different from the shaved one
     private void setLocale(String languageCode) {
         Locale locale = new Locale(languageCode);
         Locale currentLocale = Locale.getDefault();
@@ -300,7 +284,7 @@ public class HomeActivity extends AppCompatActivity {
             recreate();
         }
     }
-
+    //saves locale to shared preferences
     private void saveLocale(String languageCode) {
         getSharedPreferences("Settings", MODE_PRIVATE)
                 .edit()

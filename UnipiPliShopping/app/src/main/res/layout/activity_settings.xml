@@ -35,55 +35,54 @@
             android:id="@+id/language_spinner"
             android:layout_width="158dp"
             android:layout_height="60dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="108dp"
             android:entries="@array/language_options"
-            app:layout_constraintBottom_toTopOf="@+id/theme_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.49" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/buy_btn_"
-            android:layout_width="125dp"
-            android:layout_height="51dp"
+            android:layout_width="170dp"
+            android:layout_height="63dp"
             android:layout_marginTop="408dp"
-            android:text="Button"
+            android:text="@string/log_out"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.448" />
+            app:layout_constraintVertical_bias="0.442" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/theme_toggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toggle Switch"
+            android:text="@string/theme_btn"
+            android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/buy_btn_"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/language_spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/language_spinner"
+            app:layout_constraintVertical_bias="0.288" />
 
         <LinearLayout
-            android:layout_width="247dp"
-            android:layout_height="66dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp"
             app:layout_constraintBottom_toTopOf="@+id/buy_btn_"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/theme_toggle"
-            app:layout_constraintVertical_bias="0.666">
+            app:layout_constraintVertical_bias="0.36">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="16dp"
-                android:text="Enable Geofencing"
+                android:text="@string/enable_geofencing"
                 android:textSize="18sp" />
 
             <androidx.appcompat.widget.SwitchCompat

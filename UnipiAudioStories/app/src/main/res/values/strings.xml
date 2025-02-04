@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">UnipiAudioStories</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="story1">The Star Who Lost Its Sparkle</string>
-    <string name="story2">Benny the Brave Bunny</string>
-    <string name="story3">The Snail Who Wanted to Race</string>
-    <string name="story4">The Magic Paintbrush</string>
-    <string name="story5">The Lion and the Whispering Wind</string>
+
+
+    <string name="story1" translatable="false">The Star Who Lost Its Sparkle</string>
+    <string name="story2" translatable="false">Benny the Brave Bunny</string>
+    <string name="story3" translatable="false">The Snail Who Wanted to Race</string>
+    <string name="story4" translatable="false">The Magic Paintbrush</string>
+    <string name="story5" translatable="false">The Lion and the Whispering Wind</string>
+    <string name="read_story">Read</string>
+    <string name="favs">Favorite Stories</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Ελληνικά</item>
+        <item>中文</item>
+    </string-array>
+
 </resources>

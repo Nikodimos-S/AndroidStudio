@@ -14,4 +14,7 @@
     <string name="go_to_register_btn">Μεταβείτε στην εγγραφή</string>
     <string name="got_to_login_btn">Μεταβείτε στην εγγραφή</string>
     <string name="order_btn">Ολοκλήρωση Παραγγελία</string>
+    <string name="log_out">Αποσύνδεση</string>
+    <string name="enable_geofencing">Ενεργοποίηση Geofencing</string>
+    <string name="theme_btn">Λειτουργία Light/Dark</string>
 </resources>

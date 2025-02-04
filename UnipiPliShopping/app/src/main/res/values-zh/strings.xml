@@ -14,4 +14,7 @@
     <string name="go_to_register_btn">前往注册</string>
     <string name="got_to_login_btn">登录</string>
     <string name="order_btn">订单完成</string>
+    <string name="log_out">注销</string>
+    <string name="enable_geofencing">启用地理围栏</string>
+    <string name="theme_btn">亮/暗模式</string>
 </resources>

@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import androidx.recyclerview.widget.RecyclerView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,13 +16,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -82,7 +79,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
 
 
     }
-
+    //fethes user email from firebase auth and then uses that to fetch the cart from the firestore database
     private void loadCartData() {
         String userEmail = m_auth.getCurrentUser().getEmail();
 
@@ -102,7 +99,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
                                         productNames.clear();
                                         productPrices.clear();
                                         itemCounts.clear();
-
+                                        //gets item name price and quantity from firestore and adds it to respective list
                                         if (cartItems != null) {
                                             for (Map<String, Object> item : cartItems) {
                                                 String name = (String) item.get("name");
@@ -148,6 +145,8 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
         totalPriceText.setText(String.format(Locale.getDefault(), "Total: €%.2f", total));
     }
 
+    //this method gets the user's email, fethes the cart then adds the order data to firestore,
+    //clears the cart in the database and the cart activity(zeros the total and removes all items)
     private void placeOrder() {
         String userEmail = m_auth.getCurrentUser().getEmail();
 
@@ -202,14 +201,14 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
                 });
     }
 
-
+    //handles quantity increase for products
     @Override
     public void onIncreaseQuantity(String productName) {
         itemCounts.put(productName, itemCounts.get(productName) + 1);
         updateDatabase();
         updateTotalPrice();
     }
-
+    //handles quantity decrease for products
     @Override
     public void onDecreaseQuantity(String productName) {
         int quantity = itemCounts.get(productName) - 1;
@@ -230,7 +229,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnQua
         updateDatabase();
         updateTotalPrice();
     }
-
+    //updates the database on quantity increase and decrease.
     private void updateDatabase() {
         String userEmail = m_auth.getCurrentUser().getEmail();
 
